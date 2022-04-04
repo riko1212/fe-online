@@ -4,41 +4,69 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Barbershop</title>
   </head>
   <body>
-    <header>
-      <a href="">
+    <header class="header">
+      <a href="" class="header-logo">
         <img src="./images/logo.svg" alt="лого сайта" />
       </a>
-      <nav>
-        <ul>
-          <li><a href="">О нас</a></li>
-          <li><a href="">Услуги и цены</a></li>
-          <li><a href="">Мастера</a></li>
-          <li><a href="">Контакты</a></li>
+      <nav class="header-navigation">
+        <ul class="header-list">
+          <li class="header-item">
+            <a href="https://www.google.com/" class="header-link link">О нас</a>
+          </li>
+          <li class="header-item">
+            <a href="./portfolio.html" class="header-link link"
+              >Услуги и цены</a
+            >
+          </li>
+          <li class="header-item">
+            <a href="#masters" class="header-link link">Мастера</a>
+          </li>
+          <li class="header-item">
+            <a href="https://www.google.com/" class="header-link link"
+              >Контакты</a
+            >
+          </li>
         </ul>
       </nav>
-      <a href="tel:+380441111111">+38 044 111 11 11</a>
-      <button type="button">онлайн-запись</button>
+      <a class="header-tel link" href="tel:+380441111111">+38 044 111 11 11</a>
+      <button type="button" class="header-btn">онлайн-запись</button>
     </header>
     <main>
-      <section>
-        <ul>
-          <li>
-            <a href="" target="_blank" rel="noopener noreferrer nofollow"
+      <section class="hero">
+        <ul class="hero-list">
+          <li class="hero-item">
+            <a
+              href=""
+              class="hero-link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
               >Instagram</a
             >
           </li>
-          <li>
-            <a href="" target="_blank" rel="noopener noreferrer nofollow"
+          <li class="hero-item">
+            <a
+              href=""
+              class="hero-link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
               >Youtube</a
             >
           </li>
         </ul>
-        <p lang="en">A hair salon for men in Kyiv</p>
-        <h1 lang="en">BarberShop</h1>
-        <p>
+        <p class="hero-top-text" lang="en">A hair salon for men in Kyiv</p>
+        <h1 class="hero-title test" lang="en">BarberShop</h1>
+        <p class="hero-bottom-text test">
           Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со
           вкусом.
         </p>
@@ -72,8 +100,8 @@
         <h2>Услуги и цены</h2>
         <ul>
           <li>
-            <p>Мужская стрижка</p>
-            <p>от 300 грн.</p>
+            <p id="text">Мужская стрижка</p>
+            <p id="text1">от 300 грн.</p>
           </li>
           <li>
             <p>Стрижка бороды</p>
@@ -134,7 +162,7 @@
           чем 10 раз прочитать.
         </p>
       </section>
-      <section>
+      <section id="masters">
         <p>для настоящих ценителей атмосферы</p>
         <h2>Наши мастера</h2>
         <ul>

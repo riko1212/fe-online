@@ -1,0 +1,40 @@
+body {
+  font-family: "Open Sans", Tahoma, sans-serif;
+}
+
+.link {
+  text-decoration: none;
+  color: red;
+}
+
+p {
+  color: teal;
+}
+
+#text,
+#text1 {
+  color: violet;
+}
+
+[href="https://www.google.com/"]
+{
+  color: green;
+}
+
+.header-link.link {
+  color: rgb(0, 72, 255);
+}
+
+* {
+  color: tomato;
+}
+
+/* 
+-Універсальний селектор
+-тега
+-id
+-атрибута
+-класу
+-нащадка
+-дочірній
+ */
