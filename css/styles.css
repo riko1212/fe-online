@@ -1,40 +1,248 @@
+:root {
+  --header-color: #ffffff;
+  --main-title-color: #ffffff;
+  --second-title-color: #303030;
+  --main-btn-color: #ffffff;
+  --second-btn-color: #303030;
+  --accent-color: #ff6c00;
+}
+
 body {
   font-family: "Open Sans", Tahoma, sans-serif;
 }
 
 .link {
   text-decoration: none;
-  color: red;
 }
 
-p {
-  color: teal;
+.list {
+  list-style: none;
 }
 
-#text,
-#text1 {
-  color: violet;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
-[href="https://www.google.com/"]
-{
-  color: green;
+.top-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.header-link.link {
-  color: rgb(0, 72, 255);
+.title {
+  font-family: "Raleway", Tahoma, sans-serif;
+  font-size: 42px;
+  line-height: 1.17;
+  letter-spacing: 0.05em;
 }
 
-* {
-  color: tomato;
+.btn {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 }
 
-/* 
--Універсальний селектор
--тега
--id
--атрибута
--класу
--нащадка
--дочірній
- */
+.bottom-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+
+/* ---------------------HEADER--------------------- */
+
+.header {
+  background-color: gray;
+}
+
+.header-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--header-color);
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: #ff6c00;
+}
+
+.header-tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: var(--header-color);
+}
+
+.header-btn {
+  color: var(--main-btn-color);
+}
+
+.header-btn:hover {
+  color: var(--main-btn-color);
+  background-color: var(--accent-color);
+}
+
+/* ---------------------HERO--------------------- */
+
+.hero-link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #303030;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: #ff6c00;
+}
+
+.hero-content {
+  background-color: #303030;
+}
+
+.hero-top-text {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.hero-title {
+  font-family: "Raleway", Tahoma, sans-serif;
+  font-size: 72px;
+  line-height: 1.18;
+  letter-spacing: 0.05em;
+
+  color: var(--main-title-color);
+}
+
+.hero-bottom-text {
+  color: #9da4bd;
+}
+
+/* ---------------------ABOUT--------------------- */
+
+.about-top-text {
+  color: #303030;
+}
+
+.about-title {
+  color: var(--second-title-color);
+}
+
+.about-bottom-text {
+  color: #555555;
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+  color: #555555;
+}
+
+.about-btn {
+  color: var(--second-btn-color);
+}
+
+/* ---------------------PRICES--------------------- */
+
+.prices {
+  background-color: #303030;
+}
+
+.prices-top-text {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.prices-title {
+  color: var(--main-title-color);
+}
+
+.prices-item-text {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+
+.prices-btn {
+  color: #ffffff;
+}
+
+/* ---------------------REASONS--------------------- */
+
+.reasons-item-count {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #303030;
+}
+
+.reasons-item-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  text-align: center;
+  color: #303030;
+}
+.reasons-top-text {
+  color: #303030;
+}
+.reasons-title {
+  color: var(--second-title-color);
+}
+.reasons-bottom-text {
+  color: #555555;
+}
+
+/* ---------------------MASTERS--------------------- */
+
+.masters-top-text {
+  color: #303030;
+}
+
+.masters-title {
+  color: var(--second-title-color);
+}
+
+.masters-item-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #303030;
+}
+
+.masters-item-text {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--accent-color);
+}
+
+/* ---------------------GALLERY--------------------- */
+
+.gallery-top-text {
+  color: #303030;
+}
