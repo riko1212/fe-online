@@ -73,6 +73,16 @@ img {
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+
+.top-text::before {
+  content: "";
+  width: 63px;
+  height: 1px;
+  background-color: currentColor;
+  margin-right: 21px;
 }
 
 .title {
@@ -93,6 +103,7 @@ img {
   text-transform: uppercase;
   border: 1px solid #ff6c00;
   border-radius: 25px;
+  background-color: transparent;
 }
 
 .bottom-text {
@@ -207,6 +218,24 @@ img {
   letter-spacing: 0.05em;
   color: var(--main-title-color);
   margin-bottom: var(--typical-margin);
+  display: flex;
+  align-items: baseline;
+}
+
+.hero-title::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  background-image: url(../images/facebook.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 40px;
+}
+
+.hero-title::after {
+  content: "";
 }
 
 .hero-bottom-text {
@@ -291,15 +320,37 @@ img {
 }
 
 .prices-list {
-  border: 1px solid #ffffff;
   padding: 30px 40px;
   flex-grow: 1;
+}
+
+.prices-light {
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.prices-dark {
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .prices-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: var(--typical-margin);
+  align-items: baseline;
+}
+
+.prices-item-text:last-child {
+  order: 1;
+}
+
+.prices-item::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .prices-item:last-child {
@@ -468,13 +519,38 @@ img {
 .gallery-list {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
-  /* gap: 30px; */
+  gap: 30px;
 }
 
 .gallery-item {
   /* width: calc(100% / 2 - 30px);
   margin-left: 30px;
   margin-bottom: 30px; */
+}
+
+.contact-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  background-color: #191c26;
+  background-image: url(../images/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: calc(50% - 15px);
+}
+
+.contact-wrap .container {
+  display: flex;
+}
+
+.contacts {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  width: calc(50% - 15px);
+  height: 644px;
+}
+
+.online {
+  padding-top: 130px;
+  padding-bottom: 130px;
+  flex-grow: 1;
 }
