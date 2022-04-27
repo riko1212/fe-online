@@ -18,6 +18,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
     <title>Barbershop</title>
   </head>
@@ -25,7 +30,9 @@
     <header class="header">
       <div class="container">
         <a href="" class="header-logo">
-          <img src="./images/logo.svg" alt="лого сайта" />
+          <svg class="masters-soc-icon" width="66" height="55">
+            <use href="./images/symbol-defs.svg#icon-logo"></use>
+          </svg>
         </a>
         <nav class="header-navigation">
           <ul class="header-list list">
@@ -53,38 +60,47 @@
           <a class="header-tel link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="header-btn btn">онлайн-запись</button>
+          <button type="button" class="header-btn btn" data-modal-open>
+            онлайн-запись
+          </button>
         </div>
       </div>
     </header>
     <main>
       <section class="hero">
         <div class="container">
-          <ul class="hero-list list">
-            <li class="hero-item">
-              <a
-                href=""
-                class="hero-link link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Instagram</a
-              >
-            </li>
-            <li class="hero-item">
-              <a
-                href=""
-                class="hero-link link"
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                >Youtube</a
-              >
-            </li>
-          </ul>
+          <div class="hero-soc">
+            <ul class="hero-list list">
+              <li class="hero-item">
+                <a
+                  href=""
+                  class="hero-link link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="hero-item">
+                <a
+                  href=""
+                  class="hero-link link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
           <div class="hero-content">
             <p class="hero-top-text top-text" lang="en">
               A hair salon for men in Kyiv
             </p>
-            <h1 class="hero-title test" lang="en">BarberShop</h1>
+            <h1
+              class="hero-title animate__animated animate__bounce test"
+              lang="en"
+            >
+              BarberShop
+            </h1>
             <p class="hero-bottom-text bottom-text">
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
               и со вкусом.
@@ -125,7 +141,9 @@
           <p class="prices-top-text top-text">
             Проведи время в компании лучших мастеров
           </p>
-          <h2 class="prices-title title">Услуги и цены</h2>
+          <h2 class="prices-title title" data-aos="zoom-in-right">
+            Услуги и цены
+          </h2>
           <div class="prices-wrap">
             <ul class="prices-list prices-light list">
               <li class="prices-item">
@@ -203,13 +221,24 @@
           <h2 class="masters-title title">Наши мастера</h2>
           <ul class="masters-list list">
             <li class="masters-item">
-              <img
-                src="./images/masters-img.jpeg"
-                alt="барбер стрижет клиента"
-                width="370"
-                height="346"
-                class="masters-img"
-              />
+              <div class="masters-top-wrap">
+                <img
+                  src="./images/masters-img.jpeg"
+                  alt="барбер стрижет клиента"
+                  width="370"
+                  height="346"
+                  class="masters-img"
+                />
+                <p class="masters-cover-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Maxime quidem odio perspiciatis. Officia illum, rerum iusto
+                  soluta fugiat quidem eos dolore modi eligendi voluptates, nisi
+                  ut repellendus quae, ex sit! Maxime quidem odio perspiciatis.
+                  Officia illum, rerum iusto soluta fugiat quidem eos dolore
+                  modi eligendi voluptates, nisi ut repellendus quae, ex sit!
+                </p>
+              </div>
+
               <h3 lang="en" class="masters-item-title">John Smith</h3>
               <p lang="en" class="masters-item-text">Extreme Barber</p>
               <ul class="masters-soc-list list">
@@ -409,5 +438,17 @@
         </li>
       </ul>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          X
+        </button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
