@@ -438,11 +438,77 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           X
         </button>
+        <p class="modal-title" title="+380 (96) 111-11-11">
+          Заголовок модального вікна
+        </p>
+        <form>
+          <div class="modal-field">
+            <label class="modal-label" for="user-name">Введіть імя </label>
+            <input
+              type="text"
+              class="modal-input"
+              name="user-name"
+              placeholder="Микола"
+              required
+              minlength="2"
+              id="user-name"
+            />
+          </div>
+
+          <input
+            type="email"
+            class="modal-input"
+            name="user-email"
+            placeholder="Введіть пошту"
+          />
+          <input
+            type="tel"
+            class="modal-input"
+            placeholder="+380 (96) 111-11-11"
+            name="user-tel"
+            required
+            title="+380 (96) 111-11-11"
+            value="+380"
+          />
+          <div class="modal-field">
+            <label class="modal-label" for="user-text">Введіть імя </label>
+            <textarea
+              name="user-text"
+              id="user-text"
+              placeholder="Введіть"
+              class="modal-text"
+            ></textarea>
+          </div>
+          <fieldset>
+            <legend>add</legend>
+            <label for="cheese">cheese</label>
+            <input
+              type="checkbox"
+              id="cheese"
+              name="add"
+              value="cheese"
+              checked
+            />
+            <label for="tomato">tomato</label>
+            <input type="checkbox" id="tomato" name="add" value="tomato" />
+          </fieldset>
+
+          <div class="modal-field">
+            <label class="modal-label" for="user-city">Введіть імя </label>
+            <select name="user-city" id="user-city" class="modal-input">
+              <option value="london">London</option>
+              <option value="paris">Paris</option>
+              <option value="Novyi-Rozdil">Novyi Rozdil</option>
+            </select>
+          </div>
+
+          <button type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
