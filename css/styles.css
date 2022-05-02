@@ -103,7 +103,7 @@ img {
   border: 1px solid #ff6c00;
   border-radius: 25px;
   background-color: transparent;
-  transition: color 300ms, background-color 300ms;
+  transition: color 300ms linear, background-color 300ms;
 }
 
 .btn:hover {
