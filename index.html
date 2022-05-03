@@ -24,43 +24,44 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css" />
     <title>Barbershop</title>
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <a href="" class="header-logo">
-          <svg class="masters-soc-icon" width="66" height="55">
+        <a href="" class="logo header__logo">
+          <svg class="logo__icon" width="66" height="55">
             <use href="./images/symbol-defs.svg#icon-logo"></use>
           </svg>
         </a>
-        <nav class="header-navigation">
-          <ul class="header-list list">
-            <li class="header-item">
-              <a href="https://www.google.com/" class="header-link link"
+        <nav class="navigation">
+          <ul class="menu-list list">
+            <li class="menu-list__item">
+              <a href="https://www.google.com/" class="menu-list__link link"
                 >О нас</a
               >
             </li>
-            <li class="header-item">
-              <a href="./portfolio.html" class="header-link link"
+            <li class="menu-list__item">
+              <a href="./portfolio.html" class="menu-list__link link"
                 >Услуги и цены</a
               >
             </li>
-            <li class="header-item">
-              <a href="#masters" class="header-link link">Мастера</a>
+            <li class="menu-list__item">
+              <a href="#masters" class="menu-list__link link">Мастера</a>
             </li>
-            <li class="header-item">
-              <a href="https://www.google.com/" class="header-link link"
+            <li class="menu-list__item">
+              <a href="https://www.google.com/" class="menu-list__link link"
                 >Контакты</a
               >
             </li>
           </ul>
         </nav>
-        <div class="header-connect">
-          <a class="header-tel link" href="tel:+380441111111"
+        <div class="connect">
+          <a class="connect__tel link" href="tel:+380441111111"
             >+38 044 111 11 11</a
           >
-          <button type="button" class="header-btn btn" data-modal-open>
+          <button type="button" class="connect__btn btn" data-modal-open>
             онлайн-запись
           </button>
         </div>
@@ -69,21 +70,21 @@
     <main>
       <section class="hero">
         <div class="container">
-          <div class="hero-soc">
-            <ul class="hero-list list">
-              <li class="hero-item">
+          <div class="soc">
+            <ul class="soc-list list">
+              <li class="soc-list__item">
                 <a
                   href=""
-                  class="hero-link link"
+                  class="soc-list__link link"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   >Instagram</a
                 >
               </li>
-              <li class="hero-item">
+              <li class="soc-list__item">
                 <a
                   href=""
-                  class="hero-link link"
+                  class="soc-list__link link"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                   >Youtube</a
@@ -92,16 +93,19 @@
             </ul>
           </div>
           <div class="hero-content">
-            <p class="hero-top-text top-text" lang="en">
+            <p
+              class="hero-content__top-text top-text top-text--light"
+              lang="en"
+            >
               A hair salon for men in Kyiv
             </p>
             <h1
-              class="hero-title animate__animated animate__bounce test"
+              class="hero-content__title animate__animated animate__bounce test"
               lang="en"
             >
               BarberShop
             </h1>
-            <p class="hero-bottom-text bottom-text">
+            <p class="hero-content__bottom-text bottom-text">
               Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
               и со вкусом.
             </p>
@@ -111,28 +115,32 @@
       <section class="about">
         <div class="container">
           <ul class="about-list list">
-            <li class="about-item">
+            <li class="about-list__item">
               <img src="./images/about-img-1.jpeg" alt="барбер бреет шию" />
             </li>
-            <li class="about-item">
+            <li class="about-list__item">
               <img src="./images/about-img-2.jpeg" alt="барбер делает кантик" />
             </li>
           </ul>
           <div class="about-content">
-            <p class="about-top-text top-text">О НАС</p>
-            <h2 class="about-title title">Лучший Барбершоп твоего города</h2>
-            <p class="about-bottom-text bottom-text">
+            <p class="about-content__top-text top-text top-text--dark">О НАС</p>
+            <h2 class="about-content__title title title--light">
+              Лучший Барбершоп твоего города
+            </h2>
+            <p class="about-content__bottom-text bottom-text">
               Если ты хочешь добавить в свой образ больше уверенности – тебе
               точно к нам.
             </p>
-            <p class="about-text">
+            <p class="about-content__text">
               Мы команда, которая никогда не останавливается на достигнутом и
               жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
               никогда не сможешь быть прежним. Мы команда, которая всегда с
               клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button type="button" class="about-btn btn">онлайн-запись</button>
+            <button type="button" class="about-content__btn btn">
+              онлайн-запись
+            </button>
           </div>
         </div>
       </section>
@@ -438,7 +446,7 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           X
