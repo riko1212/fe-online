@@ -394,7 +394,42 @@
       <div class="contact-wrap">
         <div class="container">
           <section class="online">
-            <h2 class="title">Онлайн-запись</h2>
+            <h2 class="title online-title">Онлайн-запись</h2>
+            <form class="online-form">
+              <div class="online-inputs">
+                <div class="online-field">
+                  <input
+                    type="text"
+                    id="online-name"
+                    name="online-name"
+                    class="online-input"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="online-name" class="online-label">Имя*</label>
+                </div>
+                <div class="online-field">
+                  <input
+                    type="tel"
+                    id="online-tel"
+                    name="online-tel"
+                    class="online-input"
+                    placeholder=" "
+                    required
+                  />
+                  <label for="online-tel" class="online-label">Телефон*</label>
+                </div>
+              </div>
+              <div class="online-text-field">
+                <textarea
+                  name="online-mess"
+                  id="online-mess"
+                  class="online-mess"
+                  placeholder=" "
+                ></textarea>
+                <label for="online-mess" class="online-label">сообщение</label>
+              </div>
+            </form>
           </section>
           <section class="contacts">
             <h2 class="title">Контакты</h2>
@@ -438,7 +473,7 @@
         </li>
       </ul>
     </footer>
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           X
@@ -449,15 +484,20 @@
         <form>
           <div class="modal-field">
             <label class="modal-label" for="user-name">Введіть імя </label>
-            <input
-              type="text"
-              class="modal-input"
-              name="user-name"
-              placeholder="Микола"
-              required
-              minlength="2"
-              id="user-name"
-            />
+            <div class="modal-input-wrap">
+              <input
+                type="text"
+                class="modal-input"
+                name="user-name"
+                placeholder="Микола"
+                required
+                minlength="2"
+                id="user-name"
+              />
+              <svg class="input-icon" width="18" height="18 ">
+                <use href="./images/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </div>
           </div>
 
           <input
@@ -484,7 +524,25 @@
               class="modal-text"
             ></textarea>
           </div>
-          <fieldset>
+
+          <div class="modal-field">
+            <input
+              type="checkbox"
+              class="input-check visually-hidden"
+              id="input-check"
+              name="policy"
+              value="policy"
+            />
+            <label for="input-check" class="check-text">
+              <!-- <span>
+                <svg class="check-icon" width="11" height="8 ">
+                  <use href="./images/symbol-defs.svg#icon-check"></use>
+                </svg>
+              </span> -->
+              Політики користування послугами <a href="">Услов</a></label
+            >
+          </div>
+          <!-- <fieldset>
             <legend>add</legend>
             <label for="cheese">cheese</label>
             <input
@@ -505,7 +563,7 @@
               <option value="paris">Paris</option>
               <option value="Novyi-Rozdil">Novyi Rozdil</option>
             </select>
-          </div>
+          </div> -->
 
           <button type="submit">Send</button>
         </form>
