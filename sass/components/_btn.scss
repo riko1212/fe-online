@@ -1,0 +1,24 @@
+.btn {
+  min-width: 160px;
+  height: 40px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  background-color: transparent;
+  transition: color 300ms linear, background-color 300ms;
+  &:hover {
+    color: var(--main-btn-color);
+    background-color: var(--accent-color);
+  }
+  &--light {
+    color: var(--main-btn-color);
+  }
+  &--dark {
+    color: var(--second-btn-color);
+  }
+}

@@ -1,0 +1,20 @@
+.gallery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+.gallery-top-text {
+  color: #303030;
+  margin: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gallery-item {
+  /* width: calc(100% / 2 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px; */
+}

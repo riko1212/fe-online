@@ -1,18 +1,16 @@
 .header {
   position: absolute;
   width: 100%;
-
   padding-top: 32px;
   padding-bottom: 31px;
+  .container {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .header__logo {
   margin-right: 70px;
-}
-
-.header .container {
-  display: flex;
-  align-items: center;
 }
 
 .menu-list {
@@ -26,11 +24,10 @@
   letter-spacing: 0.1em;
   color: var(--header-color);
   transition: color 300ms linear;
-}
-
-.menu-list__link:hover,
-.menu-list__link:focus {
-  color: #ff6c00;
+  &:hover,
+  &:focus {
+    color: #ff6c00;
+  }
 }
 
 .header__connect {

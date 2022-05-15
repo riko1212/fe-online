@@ -1,0 +1,231 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(48, 48, 48, 0.499);
+  transition: opacity 500ms, visibility 500ms;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  transition: transform 300ms;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  .backdrop.is-hidden & {
+    transform: scale(0.5) rotate(-290deg);
+  }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #999999;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #303030;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-field {
+  margin-bottom: 10px;
+}
+.modal-input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+
+  padding-left: 30px;
+  color: #555555;
+  outline: none;
+  transition: border-color 300ms;
+  &::placeholder {
+    color: violet;
+  }
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.modal-input-wrap {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 300ms;
+  .modal-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+/* .modal-input:valid {
+  border-color: green;
+}
+.modal-input:invalid {
+  background-color: rgba(255, 0, 0, 0.177);
+}
+
+.modal-input:placeholder-shown {
+  border-color: green;
+} */
+
+.modal-label {
+  font-size: 12px;
+  color: #555555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.modal-text {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #555555;
+  resize: none;
+}
+
+.check-text {
+  font-size: 14px;
+  color: #555555;
+  @extend %align-list;
+  position: relative;
+  &::before {
+    content: "";
+    width: 16px;
+    height: 15px;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    margin-right: 5px;
+    .input-check:checked + & {
+      background-color: var(--accent-color);
+      border: none;
+      background-image: url(../images/check.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+
+/* 
+
+.check-text::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-color: #9da4bd;
+  border-radius: 50px;
+  margin-right: 10px;
+  transform: rotate(-45deg);
+}
+
+.check-text::after {
+  content: "";
+  width: 4px;
+  height: 18px;
+  background-color: #000000;
+  border-radius: 2px;
+  position: absolute;
+  top: -7px;
+  left: 9px;
+  transform: rotate(-45deg);
+  transform-origin: bottom;
+  transition: transform 300ms;
+}
+
+.input-check:checked + .check-text::after {
+  transform: rotate(45deg);
+} */
+
+/* ------------------------------------------- */
+
+/* .check-text::before {
+  content: "";
+  width: 40px;
+  height: 22px;
+  border: 1px solid #9da4bd;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.check-text::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #9da4bd;
+  left: 2px;
+  transition: transform 300ms;
+}
+
+.input-check:checked + .check-text::after {
+  transform: translate(18px);
+  background-color: #ffffff;
+}
+
+.input-check:checked + .check-text::before {
+  background-color: #bde096;
+} */
+
+/* ------------------------------------------- */
+
+/* .check-icon {
+  fill: transparent;
+}
+
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000000;
+  border-radius: 3px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-check:checked + .check-text span {
+  background-color: var(--accent-color);
+  border: transparent;
+}
+
+.input-check:focus + .check-text span {
+  border-color: var(--accent-color);
+}
+
+.input-check:checked + .check-text .check-icon {
+  fill: #ffffff;
+} */
+/* ------------------------------------------- */
