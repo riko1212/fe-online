@@ -9,8 +9,16 @@
   }
 }
 
+.navigation {
+  display: none;
+}
+
 .header__logo {
   margin-right: 70px;
+}
+
+.logo__icon {
+  fill: #ffffff;
 }
 
 .menu-list {
@@ -32,6 +40,7 @@
 
 .header__connect {
   margin-left: auto;
+  display: none;
 }
 
 .menu-list__item:not(:last-child) {
@@ -48,4 +57,95 @@
 
 .connect__btn {
   margin-left: 40px;
+}
+
+.menu-open-btn {
+  margin-left: auto;
+}
+
+.menu-close-btn {
+  display: block;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+.mob-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  .container {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.mob-menu-top {
+  width: 100%;
+}
+
+.mob-menu-list {
+}
+
+.mob-menu-list__item,
+.mob-soc__item {
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+.mob-menu-list__link,
+.mob-connect__tel {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.1em;
+  color: #303030;
+}
+
+.mob-connect {
+  margin-bottom: 64px;
+}
+.mob-connect__btn {
+  color: var(--second-btn-color);
+  display: block;
+  margin-top: 24px;
+}
+
+.mob-soc__list {
+  position: relative;
+  padding-left: 100px;
+}
+
+.mob-soc__list::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  left: 0;
+  top: 10px;
+}
+
+.mob-soc__link {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+
+  color: #303030;
+}
+
+.no-scroll {
+  overflow: hidden;
 }

@@ -27,13 +27,14 @@
     <title>Barbershop</title>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <a href="" class="logo header__logo">
           <svg class="logo__icon" width="66" height="55">
             <use href="./images/symbol-defs.svg#icon-logo"></use>
           </svg>
         </a>
+        <button type="button" class="menu-open-btn">O</button>
         <nav class="navigation">
           <ul class="menu-list list">
             <li class="menu-list__item">
@@ -69,9 +70,74 @@
           </button>
         </div>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close-btn">X</button>
+            <ul class="mob-menu-list list">
+              <li class="mob-menu-list__item">
+                <a
+                  href="https://www.google.com/"
+                  class="mob-menu-list__link link"
+                  >О нас</a
+                >
+              </li>
+              <li class="mob-menu-list__item">
+                <a href="./portfolio.html" class="mob-menu-list__link link"
+                  >Услуги и цены</a
+                >
+              </li>
+              <li class="mob-menu-list__item">
+                <a href="#masters" class="mob-menu-list__link link">Мастера</a>
+              </li>
+              <li class="mob-menu-list__item">
+                <a
+                  href="https://www.google.com/"
+                  class="mob-menu-list__link link"
+                  >Контакты</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <div class="mob-connect">
+              <a class="mob-connect__tel link" href="tel:+380441111111"
+                >+38 044 111 11 11</a
+              >
+              <button
+                type="button"
+                class="mob-connect__btn btn btn--light"
+                data-modal-open
+              >
+                онлайн-запись
+              </button>
+            </div>
+            <ul class="mob-soc__list list">
+              <li class="mob-soc__item">
+                <a
+                  href=""
+                  class="mob-soc__link link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc__item">
+                <a
+                  href=""
+                  class="mob-soc__link link"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <div class="soc">
             <ul class="soc__list list">
@@ -114,7 +180,7 @@
             </p>
           </div>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="about">
         <div class="container">
           <ul class="about-list list">
@@ -304,12 +370,33 @@
           <h2 class="visually-hidden">Галерея</h2>
           <ul class="gallery-list list">
             <li class="gallery-item">
-              <img
-                src="./images/gallery-img-1.jpeg"
-                alt="барбер стрижет клиента"
-                width="270"
-                height="360"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/gallery-img-1.jpeg    1x,
+                    ./images/gallery-img-1-2x.jpeg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery-img-1-tab.jpeg    1x,
+                    ./images/gallery-img-1-tab-2x.jpeg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery-img-1-mob.jpeg    1x,
+                    ./images/gallery-img-1-mob-2x.jpeg 2x
+                  "
+                  media="(min-width:320px)"
+                />
+                <img
+                  src="./images/gallery-img-1.jpeg"
+                  alt="барбер стрижет клиента"
+                />
+              </picture>
             </li>
             <li class="gallery-item">
               <img
@@ -521,5 +608,6 @@
       AOS.init();
     </script>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

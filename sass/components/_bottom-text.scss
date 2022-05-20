@@ -1,5 +1,8 @@
 .bottom-text {
-  @include font(18px, 1.67, null, 0.02em);
+  @include font(16px, 1.62, null, 0.02em);
+  @include desktop {
+    @include font(18px, 1.67, null, null);
+  }
   // font-size: 18px;
   // line-height: 1.67;
   // letter-spacing: 0.02em;
